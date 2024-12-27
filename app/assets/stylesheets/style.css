@@ -1,0 +1,48 @@
+
+
+/* ヘッダー */
+
+.infomation{
+  background-color: aquamarine;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  height: 100px;
+  width: 100%;
+}
+
+.title a{
+  margin-left: 50px;
+  color: gray;
+}
+
+.button a {
+  text-decoration: none;
+  list-style: none;
+  margin-right: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin-right: 20px;
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 一覧表示機能 */
+
+.new_link{
+  font-size: 30px;
+  padding: 20px;
+}

@@ -1,0 +1,18 @@
+<div class="new_link" >
+  <%= link_to "新規投稿", new_memo_path %>
+</div>
+
+<% @memos.each do |m| %>
+  <div>
+    <%= m.title %>
+  </div>
+  <div>
+    <%= m.detail %>
+  </div>
+  <div>
+    <%= m.category.name %>
+  </div>
+  <div>
+    <%= m.importance.name %>
+  </div>
+<% end %>
