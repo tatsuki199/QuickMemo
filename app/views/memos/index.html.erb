@@ -4,6 +4,9 @@
 
 <% @memos.each do |m| %>
   <div>
+    <%= image_tag m.image.variant(resize: '500x500'), class: 'memo-image' if m.image.attached? %>
+  </div>
+  <div>
     <%= m.title %>
   </div>
   <div>
