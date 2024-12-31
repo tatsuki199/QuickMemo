@@ -1,18 +1,24 @@
 <div class="new_link" >
   <%= link_to "新規投稿", new_memo_path %>
 </div>
-
-<% @memos.each do |m| %>
-  <div>
-    <%= m.title %>
-  </div>
-  <div>
-    <%= m.detail %>
-  </div>
-  <div>
-    <%= m.category.name %>
-  </div>
-  <div>
-    <%= m.importance.name %>
-  </div>
-<% end %>
+<ul class="item-lists">
+  <% @memos.each do |m| %>
+    <li class="list">
+      <div class="image">
+          <%= image_tag m.image.variant(resize: '500x500'), class: 'memo-image' if m.image.attached? %>
+      </div>
+      <div class="content">
+        タイトル：<%= m.title %>
+      </div>
+      <div class="content">
+        内容：<%= m.detail %>
+      </div>
+      <div class="content">
+        カテゴリー：<%= m.category.name %>
+      </div>
+      <div class="content importance">
+        重要度：<%= m.importance.name %>
+      </div>
+    </li>
+  <% end %>
+</ul>
