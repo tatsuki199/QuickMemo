@@ -6,6 +6,12 @@
     <%= f.text_field :title, placeholder: "タイトル名", class: 'memo-form__title' %>
   </div>
   <div>
+    <%= f.label :image, :画像, class: 'memo-image__label' %>
+  </div>
+  <div>
+    <%= f.file_field :image, placeholder: "画像を添付してください", class: 'memo-form__image' %>
+  </div>
+  <div>
     <%= f.label :detail, :内容, class: 'memo-form__label' %>
   </div>
   <div>

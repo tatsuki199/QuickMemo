@@ -7,4 +7,5 @@ class Memo < ApplicationRecord
   validates :title, :detail, presence: true
 
   validates :category_id, :importance_id, numericality: {other_than: 1 , message: "can't be blank"}
+
 end
