@@ -1,0 +1,8 @@
+
+<div class="show-item">
+  <h2><%= @memo.title %></h2>
+  <%= image_tag @memo.image, class: "item-price-box" %>
+  <div class="show-items"><%= @memo.detail %></div>
+  <div class="show-items"><%= Category.find(@memo.category_id).name %></div>
+  <div class="show-items"><%= Importance.find(@memo.importance_id).name %></div>
+</div>
