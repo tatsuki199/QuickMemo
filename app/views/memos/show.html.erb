@@ -1,6 +1,16 @@
 
 <div class="show-item">
-  <h2><%= @memo.title %></h2>
+  <div class="top-content">
+    <h2><%= @memo.title %></h2>
+    <ul>
+      <li class="content">
+        <%= link_to "投稿の編集", edit_memo_path(@memo.id) %>
+      </li>
+      <li class="content">
+        <%= link_to "投稿の削除", memo_path(@memo.id), data: {turbo_method: :delete} %>
+      </li>
+    </ul>
+  </div>
   <%= image_tag @memo.image, class: "item-price-box" %>
   <div class="show-items"><%= @memo.detail %></div>
   <div class="show-items"><%= Category.find(@memo.category_id).name %></div>
