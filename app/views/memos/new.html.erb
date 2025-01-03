@@ -1,29 +1,31 @@
-<%= form_with model: @memo, local: true do |f| %>
-  <div>
-    <%= f.label :title, :タイトル名, class: 'memo-form__label' %>
-  </div>
-  <div>
-    <%= f.text_field :title, placeholder: "タイトル名", class: 'memo-form__title' %>
-  </div>
-  <div>
-    <%= f.label :image, :画像, class: 'memo-image__label' %>
-  </div>
-  <div>
-    <%= f.file_field :image, placeholder: "画像を添付してください", class: 'memo-form__image' %>
-  </div>
-  <div>
-    <%= f.label :detail, :内容, class: 'memo-form__label' %>
-  </div>
-  <div>
-    <%= f.text_field :detail, placeholder: "投稿したい内容を入力してください", class: 'memo-form__detail' %>
-  </div>
-  <div>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-  </div>
-  <div>
-    <%= f.collection_select(:importance_id, Importance.all, :id, :name, {}, {class:"importance-select"}) %>
-  </div>
-  <div>
-    <%= f.submit "投稿" %>
-  </div>
-<% end %>
+<div class="form">
+  <%= form_with model: @memo, local: true do |f| %>
+    <div>
+      <%= f.label :title, :タイトル名, class: 'memo-form__label' %>
+    </div>
+    <div>
+      <%= f.text_field :title, placeholder: "タイトル名", class: 'memo-form__title' %>
+    </div>
+    <div>
+      <%= f.label :image, :画像, class: 'memo-image__label' %>
+    </div>
+    <div>
+      <%= f.file_field :image, placeholder: "画像を添付してください", class: 'memo-form__image' %>
+    </div>
+    <div>
+      <%= f.label :detail, :内容, class: 'memo-form__label' %>
+    </div>
+    <div>
+      <%= f.text_field :detail, placeholder: "投稿したい内容を入力してください", class: 'memo-form__detail' %>
+    </div>
+    <div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+    </div>
+    <div>
+      <%= f.collection_select(:importance_id, Importance.all, :id, :name, {}, {class:"importance-select"}) %>
+    </div>
+    <div>
+      <%= f.submit "投稿" %>
+    </div>
+  <% end %>
+</div>
