@@ -58,7 +58,7 @@ li {
 }
 
 .list{
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .image{
@@ -75,4 +75,22 @@ li {
 
 .importance{
   color:red;
+}
+
+/* 詳細ページ */
+
+.show-item{
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.item-price-box {
+  height: 80vh;
+  width: 80vh;
+  margin: 25px 0px;
+}
+
+.show-items{
+  margin: 10px 0;
 }

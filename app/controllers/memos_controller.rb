@@ -16,6 +16,23 @@ class MemosController < ApplicationController
     end
   end
 
+  def show
+    @memo = Memo.find(params[:id])
+  end
+
+  # def edit
+  #   @memo = Memo.find(params[:id])
+  # end
+
+  # def update
+  #   @memo = Memo.find(params[:id])
+  #   if @memo.update(memo_params)
+  #     redirect_to memo_path
+  #   else
+  #     render :edit, status: :unprocessable_entity
+  #   end
+  # end
+
 
   private
   def memo_params
