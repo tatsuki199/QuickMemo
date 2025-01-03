@@ -4,10 +4,10 @@
     <h2><%= @memo.title %></h2>
     <ul>
       <li class="content">
-        <%= link_to "投稿の編集", edit_memo_path(@memo.id) %>
+        <%= link_to "編集", edit_memo_path(@memo.id) %>
       </li>
       <li class="content">
-        <%= link_to "投稿の削除", memo_path(@memo.id), data: {turbo_method: :delete} %>
+        <%= link_to "削除", memo_path(@memo.id), data: {turbo_method: :delete} %>
       </li>
     </ul>
   </div>

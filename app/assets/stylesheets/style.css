@@ -43,6 +43,22 @@ li {
   border-radius: 5px;
 }
 
+/* 新規投稿 */
+
+.form{
+  height: 100%;
+  width: 70vh;
+  margin:50px auto 0;
+}
+.memo-form__title{
+  width: 100%;
+}
+
+.memo-form__detail{
+  height: 120px;
+  width: 100%;
+}
+
 /* 一覧表示機能 */
 
 .new_link{
@@ -71,6 +87,7 @@ li {
 .content{
   text-align: left;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .importance{
@@ -81,6 +98,14 @@ li {
 
 .show-item{
   text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.top-content{
+  width: 70vh;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
