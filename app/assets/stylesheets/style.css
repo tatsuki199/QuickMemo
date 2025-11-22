@@ -1,4 +1,14 @@
+/* リセットCSS */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll; /* スクロールバーを常に表示させてちらつきを防ぐ */
+}
 
 /* ヘッダー */
 
@@ -67,7 +77,8 @@ li {
 }
 
 .item-lists {
-  width: 100vw;
+  width: 100%;
+  margin: 10px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -78,16 +89,31 @@ li {
 }
 
 .image{
-  height: 500px;
-  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 510px;
+  width: 540px;
   border: solid 5px aquamarine;
   border-radius: 15px ;
 }
 
 .content{
+  width: 540px;
+  display: flex;
   text-align: left;
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 18px;
+  padding-bottom: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.left-content{
+  width: 125px;
+}
+
+.right-content{
+  margin-left: 5px;
 }
 
 .importance{
@@ -100,6 +126,12 @@ li {
   text-align: center;
   align-items: center;
   margin: 0 auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.top-title{
+  align-items: center;
 }
 
 .top-content{
@@ -118,4 +150,12 @@ li {
 
 .show-items{
   margin: 10px 0;
+}
+
+/* devise */
+
+.contents{
+  text-align: center;
+  align-items: center;
+  margin: auto;
 }

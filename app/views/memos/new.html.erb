@@ -16,7 +16,7 @@
       <%= f.label :detail, :内容, class: 'memo-form__label' %>
     </div>
     <div>
-      <%= f.text_field :detail, placeholder: "投稿したい内容を入力してください", class: 'memo-form__detail' %>
+      <%= f.text_area :detail, placeholder: "投稿したい内容を入力してください", class: 'memo-form__detail' %>
     </div>
     <div>
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>

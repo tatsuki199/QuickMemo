@@ -1,0 +1,24 @@
+
+    <li class="list">
+      <%= link_to memo_path(memo.id) do %>
+        <div class="image">
+            <%= image_tag memo.image.variant(resize: '500x500'), class: 'memo-image' if memo.image.attached? %>
+        </div>
+        <div class="content">
+          <p class="left-content">タイトル：</p><p class="right-content"><%= memo.title %></p>
+        </div>
+        <div class="content">
+          <p class="left-content">内容：</p><p class="right-content"><%= memo.detail %></p>
+        </div>
+        <div class="content">
+          <p class="left-content">カテゴリー：</p><p class="right-content"><%= memo.category.name %></p>
+        </div>
+        <div class="content">
+          <p class="left-content" >重要度：</p>
+          <p class="right-content importance"><%= memo.importance.name %></p>
+        </div>
+        <div>
+          <%= memo.user.nickname %>
+        </div>
+      <% end %>
+    </li>

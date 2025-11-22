@@ -3,6 +3,7 @@ class Memo < ApplicationRecord
   belongs_to :category
   belongs_to :importance
   has_one_attached :image
+  belongs_to :user
 
   validates :title, :detail, presence: true
 

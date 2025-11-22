@@ -18,10 +18,13 @@
         </div>
         <div class="button">
           <ul >
-            <li class="button-list">ログイン</li>
-            <li class="button-list">新規登録</li>
-            <li class="button-list">ログアウト</li>
-            <li class="button-list"><%= link_to "ユーザー名", "#" %></li>
+            <% if user_signed_in? %>
+              <li class="button-list"><%= link_to "ログアウト", destroy_user_session_path, data: {turbo_method: :delete } %></li>
+              <li class="button-list">ニックネーム：<%= link_to current_user.nickname, "/users/#{current_user.id}" %></li>
+            <% else %>
+              <li class="button-list"><%= link_to "ログイン", new_user_session_path %></li>
+              <li class="button-list"><%= link_to "新規登録", new_user_registration_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>
