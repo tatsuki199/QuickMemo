@@ -1,4 +1,6 @@
 class MemosController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
+
   def index
     @memos = Memo.order("created_at DESC")
   end
@@ -42,6 +44,12 @@ class MemosController < ApplicationController
 
   private
   def memo_params
-    params.require(:memo).permit(:title, :detail, :category_id, :importance_id, :image)
+    params.require(:memo).permit(:title, :detail, :category_id, :importance_id, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end

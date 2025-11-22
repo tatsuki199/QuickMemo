@@ -1,0 +1,8 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <ul class="item-lists">
+    <% @memos.each do |memo| %>
+      <%= render partial: "memos/memo", locals: {memo: memo} %>
+    <% end %>
+  </ul>
+</div>
