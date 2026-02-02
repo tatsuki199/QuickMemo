@@ -3,6 +3,18 @@ class MemosController < ApplicationController
 
   def index
     @memos = Memo.order("created_at DESC")
+    if params[:date].present?
+      date = Date.parse(params[:date])
+      @memos = @memos.where(
+        created_at: date.beginning_of_day..date.end_of_day
+      )
+    end
+    if params[:from].present? && params[:to].present?
+      from = Date.parse(params[:from]).beginning_of_day
+      to   = Date.parse(params[:to]).end_of_day
+      @memos = @memos.where(created_at: from..to)
+    end
+    
   end
 
   def new

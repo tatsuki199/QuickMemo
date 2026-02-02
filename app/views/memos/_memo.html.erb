@@ -20,5 +20,8 @@
         <div>
           <%= memo.user.nickname %>
         </div>
+        <div>
+        投稿日：<%= memo.created_at.strftime("%Y年%m月%d日") %>
+        </div>
       <% end %>
     </li>
